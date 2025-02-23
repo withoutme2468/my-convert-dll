@@ -1,0 +1,14 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main  # Рабочий процесс будет запускаться при push в ветку main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Рабочий процесс будет выполняться на Ubuntu
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
